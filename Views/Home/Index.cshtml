@@ -1,0 +1,208 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+<div class="row">
+
+    <div class="col-md-6">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-md-6">
+        <img src="https://img.freepik.com/vector-gratis/grupo-personal-medico-que-lleva-iconos-relacionados-salud_53876-43071.jpg?t=st=1710201143~exp=1710204743~hmac=b46f191b84dfd5b28a4a86460a9023d0c4ea8b30b75edee3a8ce96df93ff561e&w=740"
+            width="500px">
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-6 border border-dark" id="frm">
+        <h2>Entre em contato!:</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+        <form method="POST" id="formularioCadastro">
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Nome">Nome:</label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="Nome" id="nome" />
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Email">Email:</label>
+                </div>
+                <div class="col-md-9">
+                    <input asp-for="Email" id="email" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label asp-for="Mensagem">Mensagem (opcional):</label>
+                </div>
+                <div class="col-md-9">
+                    <textarea asp-for="Mensagem" id="mensagem"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar" id="botaoEnvio" class="mb-3" />
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="https://img.freepik.com/foto-gratis/arreglo-escritorio-vista-superior-gafas_23-2149046719.jpg?t=st=1710288348~exp=1710291948~hmac=65100f0b404b1f612365ea690cc8e218d1df085ace6fabec265ece35589bc4e4&w=740"
+                        class="figure-img img-fluid rounded" alt="Agenda de eventos">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#AgendaDeEventos">Agenda de eventos</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="https://img.freepik.com/foto-gratis/cierre-cuaderno-lema-planifica-tu-vida_171337-13586.jpg?t=st=1710288803~exp=1710292403~hmac=bfc25e8b00a324a14727e9b296c0ff9505e549a0488616430a9ed082d8a9c967&w=740"
+                        class="figure-img img-fluid rounded" alt="Dicas de vida saudável">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#DicasDeVida">Dicas de vida
+                            saudável</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+
+            <div class="col-md-4">
+                <figure class="figure">
+                    <img src="https://img.freepik.com/foto-gratis/vista-lateral-amigos-forma-al-aire-libre_23-2150828918.jpg?t=st=1710288901~exp=1710292501~hmac=6dabcb057fae488c995f15ecafdd93e7c5b967d8c16ff2cba6f7a774e7e6e06f&w=740"
+                        class="figure-img img-fluid rounded" alt="Apoiadores">
+                    <figcaption class="figure-caption text-center">
+                        <a href="#" data-toggle="modal" data-target="#Apoiadores">Apoiadores</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<!-- Modal Agenda de Eventos -->
+<div class="modal fade" id="AgendaDeEventos" tabindex="-1" aria-labelledby="examploAgendaDeEventos" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleAgendaDeEventos">Agenda de Eventos</h5>
+            </div>
+            <div class="modal-body ">
+                <p>Data: 15 de março de 2024</p>
+
+                <p>Descrição: Palestras e workshops sobre bem-estar emocional e estratégias para lidar com o estresse.
+                </p>
+
+                <p>Data: 22 de março de 2024</p>
+
+                <p>Descrição: Sessão gratuita de exercícios ao ar livre, incluindo corrida, ioga e treinamento
+                    funcional.</p>
+
+                <p>Data: 5 de abril de 2024</p>
+
+                <p>Descrição: Evento com barracas de produtores locais, demonstrações culinárias e palestras sobre
+                    nutrição equilibrada.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal Dicas De Vida-->
+<div class="modal fade" id="DicasDeVida" tabindex="-1" aria-labelledby="examploDicasDeVida" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="examploDicasDeVida">Dicas De Vida saudável</h5>
+            </div>
+            <div class="modal-body">
+                <p>Alimentação Balanceada: Coma mais frutas, vegetais e grãos integrais, evitando alimentos processados
+                    e açucarados.</p>
+                <p>Exercícios Regularmente: Pratique atividades físicas regularmente para fortalecer o corpo e a mente.
+                </p>
+                <p>Durma Bem: Garanta de 7 a 9 horas de sono por noite para recuperação e saúde geral.</p>
+                <p>Equilíbrio Emocional: Cuide da saúde mental com práticas de relaxamento e tempo para o lazer.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Apoiadores -->
+<div class="modal fade" id="Apoiadores" tabindex="-1" aria-labelledby="examploApoiadores" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="examploApoiadores">Apoiadores</h5>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://img.freepik.com/foto-gratis/retrato-joven-mujer-forma-entrenando-culturismo_23-2149552435.jpg?t=st=1710803020~exp=1710806620~hmac=89ce11333a4d5e43c342f9d01b0f99b05f8558311847e5793f1f9dbc6f4c205e&w=900"
+                            width="100px">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Empresa 1</h4>
+                        <h5>Descrição</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://img.freepik.com/foto-gratis/hombre-joven-fitness-estudio_7502-5008.jpg?w=900&t=st=1710803495~exp=1710804095~hmac=d99ccbc274f2aa219731029fa71b2fa83402ddc3f5019f7eac917d42c15208ea"
+                            width="100px">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Empresa 2</h4>
+                        <h5>Descrição</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://img.freepik.com/foto-gratis/feliz-morena-fitness-mujer-toalla-sosteniendo-brazo-cadera_171337-1867.jpg?w=900&t=st=1710803509~exp=1710804109~hmac=38d34abb1a79c537dc56f8e901270ef351c0a7bee575b31ab268a978a121afaf"
+                            width="100px">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Empresa 3</h4>
+                        <h5>Descrição</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://img.freepik.com/foto-gratis/potente-culturista-elegante-tatuaje-brazo-haciendo-ejercicios-pesas-aislado-fondo-oscuro_613910-5209.jpg?t=st=1710803978~exp=1710807578~hmac=b97176924c752927461224877f8cebe84a95bc6b630a837eae3f374162646232&w=900"
+                            width="100px">
+                    </div>
+                    <div class="col-md-8">
+                        <h4>Empresa 4</h4>
+                        <h5>Descrição</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
